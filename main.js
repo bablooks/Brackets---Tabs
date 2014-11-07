@@ -24,7 +24,7 @@ define(function (require, exports, module) {
 		}).insertBefore($('#editor-holder'));
 		
 		$('#working-set-list-container').appendTo(gtTabs);
-		$('.working-set-header').hide();
+		$('.working-set-header').remove();
 		$('.sidebar-selection-extension').remove();
 		$('.gt-tabs .scroller-shadow').remove();
     }
@@ -33,16 +33,19 @@ define(function (require, exports, module) {
 		prefs.set("showTabs", false);
 		CommandManager.get(TOGGLE).setChecked(false);
 		$('#working-set-list-container').insertBefore($('#project-files-header'));
-		$('.working-set-header').show();
+		
+		if(!$('#working-set-list-container .working-set-header').length){
+			$('<div>', {
+				'class': 'working-set-header',
+				'html': '<span class="working-set-header-title">Working Files</span>'
+			}).prependTo($('#working-set-list-container')).show();
+		}
+		
 		$('.gt-tabs').remove();
 	};
 	
 	function toggleTabs(){
-		if($('.gt-tabs').length){
-			hideTabs();
-		}else{
-			showTabs();
-		}
+		if($('.gt-tabs').length){ hideTabs(); }else{ showTabs(); }
 	};
 	
 	AppInit.appReady(function(){
