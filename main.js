@@ -3,24 +3,24 @@ define(function (require, exports, module) {
 
     var CommandManager       = brackets.getModule("command/CommandManager"),
         Menus                = brackets.getModule("command/Menus"),
-		AppInit              = brackets.getModule("utils/AppInit"),
-	 	ExtensionUtils       = brackets.getModule("utils/ExtensionUtils"),
-		PreferencesManager   = brackets.getModule("preferences/PreferencesManager"),
+	AppInit              = brackets.getModule("utils/AppInit"),
+	ExtensionUtils       = brackets.getModule("utils/ExtensionUtils"),
+	PreferencesManager   = brackets.getModule("preferences/PreferencesManager"),
         prefs                = PreferencesManager.getExtensionPrefs("gtTab"),
         stateManager         = PreferencesManager.stateManager.getPrefixedSystem("gtTab"),
-		tabsShown            = false;
+	tabsShown            = false;
 	
 	ExtensionUtils.loadStyleSheet(module, "main.less");
 	prefs.definePreference("showTabs", "boolean", false);
     
-    var workingFilesCopy;
-    var TOGGLE = "gtTabs.toggle";
+	var workingFilesCopy;
+	var TOGGLE = "gtTabs.toggle";
 
-    function showTabs() {
+    	function showTabs() {
 		prefs.set("showTabs", true);
 		CommandManager.get(TOGGLE).setChecked(true);
 		
-        var gtTabs = $('<div>', {
+        	var gtTabs = $('<div>', {
 			'class': 'gt-tabs'
 		}).insertBefore($('#editor-holder'));
 		
@@ -28,7 +28,7 @@ define(function (require, exports, module) {
 		$('.working-set-header').remove();
 		$('.sidebar-selection-extension').remove();
 		$('.gt-tabs .scroller-shadow').remove();
-    }
+	}
 	
 	function hideTabs() {
 		prefs.set("showTabs", false);
