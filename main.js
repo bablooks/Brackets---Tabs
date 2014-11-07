@@ -15,7 +15,7 @@ define(function (require, exports, module) {
     
     var workingFilesCopy;
     var TOGGLE = "gtTabs.toggle";
-    
+
     function showTabs() {
 		prefs.set("showTabs", true);
 		CommandManager.get(TOGGLE).setChecked(true);
