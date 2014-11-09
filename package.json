@@ -3,7 +3,7 @@
     "title": "Brackets File Tabs",
     "description": "Brackets extension that gives you the option to switch between tabs and working list in the sidebar",
     "homepage": "https://github.com/crot4lus/Brackets---Tabs",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Glenn Taylor <glenn@glenntaylor.co.uk> (https://github.com/crot4lus)",
     "engines": {
         "brackets": ">=0.20.0"
