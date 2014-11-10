@@ -3,8 +3,32 @@
 	background: #47484b;
 	border-top: 1px solid #4f5053;
 	
+	&.vertical{
+		#working-set-list-container{
+			height: 30px;
+			background: #47484b;
+			ul{
+				padding-bottom: 0;
+			}
+		}
+
+		#working-set-list-first-pane{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+		}
+
+		#working-set-list-second-pane{
+			display: inline-block;vertical-align: top;
+			width: 50%;
+		}
+	}
+	
+	
+	
 	li{
-		float: left;
+		display: inline-block;
+		vertical-align: top;
 		width: auto;
 		padding: 0 30px 0 10px ;
 		border-right: 1px solid #4f5053;
@@ -49,6 +73,10 @@
 	
 	.open-files-container{
 		height: 30px;
+		
+		ul{
+			margin-bottom: 0;
+		}
 		
 		a{
 			height: 20px;

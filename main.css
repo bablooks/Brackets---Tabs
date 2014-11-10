@@ -4,8 +4,26 @@
   background: #47484b;
   border-top: 1px solid #4f5053;
 }
+.gt-tabs.vertical #working-set-list-container {
+  height: 30px;
+  background: #47484b;
+}
+.gt-tabs.vertical #working-set-list-container ul {
+  padding-bottom: 0;
+}
+.gt-tabs.vertical #working-set-list-first-pane {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.gt-tabs.vertical #working-set-list-second-pane {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
 .gt-tabs li {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: auto;
   padding: 0 30px 0 10px ;
   border-right: 1px solid #4f5053;
@@ -41,6 +59,9 @@
 }
 .gt-tabs .open-files-container {
   height: 30px;
+}
+.gt-tabs .open-files-container ul {
+  margin-bottom: 0;
 }
 .gt-tabs .open-files-container a {
   height: 20px;

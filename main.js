@@ -92,6 +92,12 @@ define(function (require, exports, module) {
         }else{
             hideTabs();
         }
+		
+		setTimeout(function(){
+			if($('#editor-holder').hasClass('split-vertical')){
+				$('.gt-tabs').addClass('vertical');
+			}
+		}, 1000);
     });
 
 });
